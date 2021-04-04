@@ -1,0 +1,41 @@
+e3e3*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+textarea{
+    border: 2px solid royalblue;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 10px, 2px;
+   
+
+}
+button{
+    padding: 20px 30px;
+    background-color: #74b9ff;
+    color: #fff;;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #0984e3;
+    font-size: 1.2rem;
+}
+h1{
+    text-align: center;
+
+}
+body{
+    background-color: rgb(212, 197, 236);
+}
+
+#showdata{
+    color: rgb(51, 5, 65);
+
+}
