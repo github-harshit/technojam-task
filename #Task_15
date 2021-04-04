@@ -1,0 +1,6 @@
+In first case we get the dollar sum comparable to the result of the rolls.So the max no he can get is 12 . 
+probability of getting max in first case is 1/36 
+In second case we the dollar sum identical to the square of that value.So the max he can get 36 
+probability of getting max in second case is 1/6 
+
+ So by comparing two cases it seems that he can make more profit in case two
