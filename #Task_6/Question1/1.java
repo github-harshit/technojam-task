@@ -89,10 +89,27 @@ public class Main {
             }
         }
 
-        Iterator iterator=al.iterator();
-        while(iterator.hasNext()){
-            System.out.print(iterator.next() + " ");
+       int count=0;
+
+        for(int i=0;i<al.size();i++){
+            if(al.get(i)==0){
+                count++;
+            }
         }
+        for(int j=0;j<al.size()-1;j++){
+            int n1=al.get(j);
+            int n2=al.get(j+1);
+            if((n1!=0)&&(n2!=0)){
+                if((n1%2==0)&&(n2%2!=0)){
+                    count++;
+                }
+                if((n2%2==0)&&(n1%2!=0)){
+                    count++;
+                }
+            }
+
+        }
+        System.out.println("complexity " + count);
 
     }
         }
