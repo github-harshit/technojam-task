@@ -1,0 +1,42 @@
+LOOK Algorithm is an improved version of the SCAN Algorithm.Head starts from the first request at one end of the disk and moves towards the last request 
+at the other end servicing all the requests in between.After reaching the last request at the other end, head reverses its direction.
+It then returns to the first request at the starting end servicing all the requests in between.The same process repeats.
+
+Sample Problem 
+     Consider a disk queue with requests for I/O to blocks on cylinders 98, 183, 41, 122, 14, 124, 65, 67. The LOOK scheduling algorithm is used.
+     The head is initially at cylinder number 53 moving towards larger cylinder numbers on its servicing pass. The cylinders are numbered from 0 to 199.
+     The total head movement (in number of cylinders) incurred while servicing these requests is
+     
+     
+Solution 
+     Total head movements incurred while servicing these requests
+
+     = (65 – 53) + (67 – 65) + (98 – 67) + (122 – 98) + (124 – 122) + (183 – 124) + (183 – 41) + (41 – 14)
+
+     = 12 + 2 + 31 + 24 + 2 + 59 + 142 + 27
+
+     = 299
+
+
+Advantages-
+    It does not causes the head to move till the ends of the disk when there are no requests to be serviced.
+    It provides better performance as compared to SCAN Algorithm.
+    It does not lead to starvation.
+    It provides low variance in response time and waiting time.
+    
+Disadvantages
+    There is an overhead of finding the end requests.
+    It causes long waiting time for the cylinders just visited by the head.
+    
+    
+Algorithm For C LOOK
+   1 Let Request array represents an array storing indexes of tracks that have been requested in ascending order of their time of arrival. ‘head’ is the position of disk head.
+   2 The initial direction in which head is moving is given and it services in the same direction.
+   3 The head services all the requests one by one in the direction head is moving.
+   4 The head continues to move in the same direction until all the request in this direction are not finished.
+   5 While moving in this direction calculate the absolute distance of the track from the head.
+   6 Increment the total seek count with this distance.
+   7 Currently serviced track position now becomes the new head position.
+   8 Go to step 5 until we reach at last request in this direction.
+   9 If we reach where no requests are needed to be serviced in this direction reverse the direction and go to step 3 until all tracks in request array have not been serviced.
+
